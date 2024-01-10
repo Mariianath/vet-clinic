@@ -1,5 +1,7 @@
 package main.java.com.magicvet.model;
 
+import java.util.Objects;
+
 public class Client {
     private String firstname;
    private
@@ -7,6 +9,32 @@ public class Client {
     private String email;
 
     private Pet pet;
+
+    @Override
+    public String toString (){
+        return "Client {"
+                +"\n\tFirstname = " + firstname
+                +", Lastname = " + lastname
+                +", email = " + email
+                +"\n\tpet: " + pet
+                +"\n}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return Objects.equals(firstname, client.firstname)
+                && Objects.equals(lastname, client.lastname)
+                && Objects.equals(email, client.email)
+                && Objects.equals(pet, client.pet);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstname, lastname, email, pet);
+    }
 
     public void setFirstname (String firstname) {
         this.firstname = firstname;
