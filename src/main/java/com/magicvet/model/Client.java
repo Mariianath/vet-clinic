@@ -13,10 +13,10 @@ public class Client {
     @Override
     public String toString (){
         return "Client {"
-                +"\n\tfirstname = " + firstname
-                +", lastname = " + lastname
+                +"\n\tFirstname = " + firstname
+                +", Lastname = " + lastname
                 +", email = " + email
-                +"\n\tpet " + pet
+                +"\n\tpet: " + pet
                 +"\n}";
     }
 

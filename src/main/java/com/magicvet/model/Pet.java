@@ -16,12 +16,11 @@ public class Pet {
 
     @Override
     public String toString(){
-        return "Pet {"
-                + "name = " + name
+        return "name = " + name
                 +", type = " + type
                 +", sex = " + sex
-                +", age = " + age
-                +"}";
+                +", age = " + age;
+
     }
 
     @Override
@@ -29,7 +28,11 @@ public class Pet {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pet pet = (Pet) o;
-        return Objects.equals(type, pet.type) && Objects.equals(sex, pet.sex) && Objects.equals(age, pet.age) && Objects.equals(name, pet.name) && Objects.equals(ownerName, pet.ownerName);
+        return Objects.equals(type, pet.type)
+                && Objects.equals(sex, pet.sex)
+                && Objects.equals(age, pet.age)
+                && Objects.equals(name, pet.name)
+                && Objects.equals(ownerName, pet.ownerName);
     }
 
     @Override
