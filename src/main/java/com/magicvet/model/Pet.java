@@ -16,10 +16,13 @@ public class Pet {
 
     @Override
     public String toString(){
-        return "name = " + name
+        return "Pet{"
+                +"name = " + name
                 +", type = " + type
                 +", sex = " + sex
-                +", age = " + age;
+                +", age = " + age
+                +", ownerName = " + ownerName
+                +"}";
 
     }
 
