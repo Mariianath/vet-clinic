@@ -16,10 +16,15 @@ public class Dog extends Pet{
 
     @Override
     public String toString() {
-        return "Dog: name = " + getName()
+        return "Pet {"
+                +" type = " + getType()
                 +", sex = " + getSex()
                 +", age = " + getAge()
-                +", size = " + size;
+                +", name = " + getName()
+                +", size = " + getSize()
+                +", ownerName = " + getOwnerName()
+                +", registrationDate = " + getRegistrationDate().format(FORMATTER)
+                +"}";
     }
 
     @Override
